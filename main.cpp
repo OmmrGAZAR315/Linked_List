@@ -2,16 +2,13 @@
 
 using namespace std;
 
-
 class Mobile {
-public:
     string modelName;
     string serialNum;
     int inches;
     int ramSize;
     int storageSize;
-
-
+public:
     Mobile(const string &modal, const string &serial, int inches, int ram, int storage) {
         modelName = modal;
         serialNum = serial;
@@ -31,16 +28,15 @@ public:
 };
 
 struct Node {
+    Node *next;
     Mobile *data;
 
     Node(const string &modal, const string &serial, int inches, int ram, int storage) {
         data = new Mobile(modal, serial, inches, ram, storage);
     }
 
-    Node *next;
 };
 
-//inheritance constructor
 class Linked_list {
     Node *head;
 public:
